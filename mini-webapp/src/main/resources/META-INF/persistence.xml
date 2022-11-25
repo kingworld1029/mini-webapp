@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="myPU" transaction-type="RESOURCE_LOCAL">
+    	<!-- Loading Hibernate ORM -->
+    	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    
+        <properties>
+        	<!--  Database settings -->
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/firstdb"/>
+            <property name="javax.persistence.jdbc.user" value="derby"/>
+            <property name="javax.persistence.jdbc.password" value="derby"/>
+            <!--  Additional ORM settings -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true" />
+        </properties>
+        
+    </persistence-unit>
+    
+</persistence>
